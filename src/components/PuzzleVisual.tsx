@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import CountUp from "react-countup";
 import Image from "next/image";
 import { useRef } from "react";
 
