@@ -59,7 +59,7 @@ const HeroSection = () => {
         >
           <motion.h1 
             variants={itemVariants}
-            className="text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6"
+            className="text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-3 sm:mb-6"
           >
             Discover <span className="text-[#e8860c]">high-growth</span><br />
             property investments
@@ -67,7 +67,7 @@ const HeroSection = () => {
           
           <motion.p 
             variants={itemVariants}
-            className="text-center text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mb-8 sm:mb-10 leading-relaxed font-light px-2"
+            className="text-center text-xs sm:text-base md:text-lg text-gray-300 max-w-2xl mb-8 sm:mb-10 leading-relaxed font-light px-2"
           >
             Join the CEG Equity Token batch. Start building your portfolio with fractional ownership of global assets.
           </motion.p>

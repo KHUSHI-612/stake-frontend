@@ -59,7 +59,7 @@ const PuzzleVisual = () => {
 
           {/* Scroll-Driven Parallax Drop Component */}
           <motion.div
-            className="absolute top-[43%] sm:top-[41%] left-[46%] w-[23%] sm:w-[22%] z-20"
+            className="absolute top-[43%] sm:top-[41%] left-[46%] w-[18%] sm:w-[22%] z-20"
             style={{
               y: pieceY,
               scale: pieceScale,
