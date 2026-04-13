@@ -50,7 +50,7 @@ const HeroSection = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 text-center flex flex-col items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"

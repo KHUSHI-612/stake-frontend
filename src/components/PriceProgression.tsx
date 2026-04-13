@@ -20,12 +20,12 @@ const PriceProgression = () => {
         <div className="absolute bottom-0 right-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#e8860c]/[0.18] blur-[80px] sm:blur-[100px] rounded-full pointer-events-none translate-x-1/4 translate-y-1/4"></div>
         
         {/* Header Section */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-3 sm:mb-4 gap-3 sm:gap-4 px-1 sm:px-2">
+        <div className="flex flex-col items-start gap-2 sm:gap-3 sm:flex-row sm:items-center sm:justify-between mb-3 sm:mb-4 px-1 sm:px-2">
           <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#e8860c] tracking-tight">
             Price Progression (200 Tokens)
           </h2>
           
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <span className="bg-white text-gray-900 text-[9px] font-extrabold tracking-[0.08em] uppercase px-3 py-1.5 rounded-md shadow-sm">
               SOLD OUT 1-3
             </span>
@@ -36,7 +36,7 @@ const PriceProgression = () => {
         </div>
 
         {/* Mobile: Horizontal Scroll | Tablet: 2-row wrap | Desktop: 6-column grid */}
-        <div className="flex overflow-x-auto py-2 md:grid md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 no-scrollbar snap-x snap-mandatory md:flex-wrap md:overflow-visible">
+        <div className="flex overflow-x-auto py-2 pl-0 md:pl-0 md:grid md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 no-scrollbar snap-x snap-mandatory md:flex-wrap md:overflow-visible scroll-smooth">
           {batches.map((batch) => (
             <motion.div
               key={batch.id}

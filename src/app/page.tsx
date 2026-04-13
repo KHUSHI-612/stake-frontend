@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Main Content Sections */}
-      <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 z-10">
+      <div className="relative w-full max-w-[1280px] mx-auto px-5 sm:px-6 z-10">
         <PuzzleVisual />
         <PriceProgression />
       </div>

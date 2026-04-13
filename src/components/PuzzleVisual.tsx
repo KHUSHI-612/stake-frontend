@@ -18,7 +18,7 @@ const PuzzleVisual = () => {
   const pieceOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1]);
   return (
     <section ref={containerRef} className="relative w-full max-w-[1400px] mx-auto pb-8 -mt-[160px] sm:-mt-[240px] md:-mt-[340px] z-10" id="digital-assets">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative h-full">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 relative h-full">
 
         {/* Left Side: Puzzle Visual Card */}
         <motion.div
@@ -29,7 +29,7 @@ const PuzzleVisual = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Main Puzzle Board Image */}
-          <div className="w-full rounded-3xl overflow-hidden border border-white/20 border-b-0 shadow-[0_30px_70px_rgba(0,0,0,0.6)] bg-[#111] relative">
+          <div className="w-full rounded-xl sm:rounded-3xl overflow-hidden border border-white/20 border-b-0 shadow-[0_30px_70px_rgba(0,0,0,0.6)] bg-[#111] relative">
             <Image
               src="/board.png"
               alt="Property Visualization"
@@ -74,18 +74,18 @@ const PuzzleVisual = () => {
 
 
         <motion.div
-          className="w-full lg:w-[28%] flex flex-col justify-center gap-y-6 sm:gap-y-8 z-20 lg:pl-4 px-2 sm:px-0"
+          className="w-full lg:w-[28%] flex flex-col justify-center items-center lg:items-start gap-y-4 sm:gap-y-8 z-20 lg:pl-4"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="p-0 relative overflow-visible">
-            <div className="text-3xl sm:text-4xl lg:text-[48px] font-extrabold text-white leading-none tracking-tight mb-6 sm:mb-8">
-              <div className="mb-4">Access</div>
-              <div className="mb-4">premium</div>
-              <div className="mb-4">property</div>
-              <div className="mb-4">ownership</div>
+            <div className="text-[1.8rem] sm:text-4xl lg:text-[48px] font-[800] text-white leading-[1.2] sm:leading-none tracking-tight mb-4 sm:mb-8 text-center lg:text-left">
+              Access<br className="hidden lg:inline" />{" "}
+              premium<br className="hidden lg:inline" />{" "}
+              property<br className="hidden lg:inline" />{" "}
+              ownership<br className="hidden lg:inline" />{" "}
               <span className="text-[#e8860c] relative inline-block">
                 {/* Animated Arrow Sequence - Hidden on mobile/tablet */}
                 <motion.div
@@ -110,11 +110,11 @@ const PuzzleVisual = () => {
             </div>
 
             <motion.div
-              className="inline-flex flex-col p-3 sm:p-3.5 px-4 sm:px-5 rounded-xl border border-white/10 bg-[#2a3548]/50 backdrop-blur-xl w-fit shadow-2xl relative overflow-hidden group"
+              className="flex flex-col items-center lg:items-start p-4 sm:p-5 px-5 sm:px-6 rounded-xl border border-white/10 bg-[#2a3548]/50 backdrop-blur-xl w-full sm:w-auto lg:w-fit shadow-2xl relative overflow-hidden group"
               whileHover={{ y: -1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex items-center space-x-2 text-[13px] text-white/90 font-bold mb-2.5">
+              <div className="flex items-center justify-center lg:justify-start space-x-2 text-[13px] text-white/90 font-bold mb-2.5">
                 <Image
                   src="/logo.png"
                   alt="Logo"
@@ -125,7 +125,7 @@ const PuzzleVisual = () => {
                 <span className="tracking-wide">All Time Returns</span>
               </div>
 
-              <div className="flex items-end space-x-2">
+              <div className="flex items-end justify-center lg:justify-start space-x-2">
                 <span className="text-lg md:text-xl font-bold text-white tabular-nums tracking-tighter leading-none">
                   AED 165,000
                 </span>

@@ -134,17 +134,17 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <div className="border-t border-white/10 pt-4 flex flex-col space-y-4">
+            <div className="border-t border-white/10 pt-4 flex items-center space-x-4">
               <Link
                 href="#"
-                className="text-base font-medium text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Login
               </Link>
               <Link
                 href="#"
-                className="w-full py-3 text-center text-sm font-semibold text-white bg-[#e8860c] rounded-lg transition-colors duration-300 shadow-[0_0_15px_rgba(232,134,12,0.2)]"
+                className="px-6 py-2.5 text-sm font-semibold text-white bg-[#e8860c] hover:bg-[#d4790b] rounded-full transition-colors duration-300 shadow-[0_0_15px_rgba(232,134,12,0.3)]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sign Up
