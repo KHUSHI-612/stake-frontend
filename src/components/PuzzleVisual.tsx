@@ -2,19 +2,27 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const PuzzleVisual = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 85%", "center center"]
   });
 
-  const pieceY = useTransform(scrollYProgress, [0, 1], [-250, 0]);
-  const pieceScale = useTransform(scrollYProgress, [0, 1], [1.4, 1]);
-  const pieceRotate = useTransform(scrollYProgress, [0, 1], [35, 0]);
+  const pieceY = useTransform(scrollYProgress, [0, 1], [isMobile ? -100 : -250, 0]);
+  const pieceScale = useTransform(scrollYProgress, [0, 1], [isMobile ? 1.2 : 1.4, 1]);
+  const pieceRotate = useTransform(scrollYProgress, [0, 1], [isMobile ? 15 : 35, 0]);
   const pieceOpacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 1]);
   return (
     <section ref={containerRef} className="relative w-full max-w-[1400px] mx-auto pb-8 -mt-[160px] sm:-mt-[240px] md:-mt-[340px] z-10" id="digital-assets">
@@ -51,7 +59,7 @@ const PuzzleVisual = () => {
 
           {/* Scroll-Driven Parallax Drop Component */}
           <motion.div
-            className="absolute top-[41%] left-[46%] w-[22%] z-20 hidden sm:block"
+            className="absolute top-[48%] sm:top-[41%] left-[46%] w-[26%] sm:w-[22%] z-20"
             style={{
               y: pieceY,
               scale: pieceScale,
